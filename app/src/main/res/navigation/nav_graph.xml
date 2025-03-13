@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuViewFragment">
+
+    <fragment
+        android:id="@+id/menuViewFragment"
+        android:name="com.example.mygame.features.menuview.presenter.ui.MenuViewFragment"
+        android:label="fragment_menu_view"
+        tools:layout="@layout/fragment_menu_view" >
+        <action
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            android:id="@+id/action_menuViewFragment_to_gameSceneFragment"
+            app:destination="@id/gameSceneFragment" />
+        <argument
+            android:name="coins"
+            app:argType="integer"/>
+    </fragment>
+    <fragment
+        android:id="@+id/gameSceneFragment"
+        android:name="com.example.mygame.features.gamescene.presenter.ui.GameSceneFragment"
+        android:label="fragment_game_scene"
+        tools:layout="@layout/fragment_game_scene" >
+        <action
+            android:id="@+id/action_gameSceneFragment_to_menuViewFragment"
+            app:destination="@id/menuViewFragment" />
+        <action
+            app:enterAnim="@anim/from_top"
+            app:exitAnim="@anim/to_bottom"
+            app:popEnterAnim="@anim/from_bottom"
+            app:popExitAnim="@anim/to_top"
+            android:id="@+id/action_gameSceneFragment_to_endGamePopupFragment"
+            app:destination="@id/endGamePopupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endGamePopupFragment"
+        android:name="com.example.mygame.features.endgamepopup.presenter.ui.EndGamePopupFragment"
+        android:label="fragment_end_game_popup"
+        tools:layout="@layout/fragment_end_game_popup" >
+        <action
+            android:id="@+id/action_endGamePopupFragment_to_menuViewFragment"
+            app:destination="@id/menuViewFragment"/>
+        <argument
+            android:name="coins"
+            app:argType="integer"/>
+    </fragment>
+</navigation>

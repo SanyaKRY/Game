@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.menuview.presenter.ui.MenuViewFragment">
+
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="PLAY"
+        android:background="@drawable/button"
+        android:textSize="22sp"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/default_text_card"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="64dp"
+        app:srcCompat="@drawable/shield" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/gameNumberTextView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:text=" Game  \nLogo №1"
+        android:gravity="center"
+        android:maxLines="2"
+        android:lines="2"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/default_text_card"
+        app:layout_constraintBottom_toTopOf="@+id/playButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/coinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="48dp"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <androidx.appcompat.widget.AppCompatImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@drawable/default_background_card"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/gameNumberTextView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/cash" />-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/circle"
+        app:layout_constraintEnd_toStartOf="@+id/coinTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
